@@ -1,2 +1,2 @@
-# idwall-go-dev-projects
-Repository created to store the projects that area part of the GoDev process
+# Treinamento GoDev
+Repositório criado para guardar os arquivos gerados no treinamento GoDev em Swift, oferecido pela Idwall.
