@@ -1,5 +1,13 @@
 import UIKit
 
+for i in 1...10 {
+    if i % 2 == 1 {
+        continue
+    }
+
+    print(i)
+}
+
 //variável que pode ser alterada
 var myAge: Int = 23
 
@@ -13,3 +21,6 @@ var techSkills: [String] = ["React.JS",
                             "Swift",
                             "HTML",
                             "CSS/SASS"]
+
+
+
