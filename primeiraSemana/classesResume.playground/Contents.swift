@@ -1,12 +1,14 @@
 import UIKit
 
-for i in 1...10 {
-    if i % 2 == 1 {
-        continue
-    }
-
-    print(i)
+func doubleInPlace(number:inout Int) {// declaring number as an inout para//meter
+    print(number)
+    number *= 2
+    print(number)
 }
+
+var myNum = 10
+doubleInPlace(number: &myNum)
+print("variável \(myNum)")
 
 //variável que pode ser alterada
 var myAge: Int = 23
@@ -21,6 +23,4 @@ var techSkills: [String] = ["React.JS",
                             "Swift",
                             "HTML",
                             "CSS/SASS"]
-
-
 
