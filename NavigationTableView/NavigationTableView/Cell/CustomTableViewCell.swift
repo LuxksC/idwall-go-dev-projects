@@ -16,7 +16,9 @@ class CustomTableViewCell: UITableViewCell {
     
     func setup(title: String, image: String) {
         titleLabel.text = title
-        imageCellView.image = UIImage(named: image)
+        if let image = UIImage(named: image) {
+            imageCellView.image = image
+        }
     }
     
 }

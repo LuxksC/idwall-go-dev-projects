@@ -11,12 +11,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var receitas: [Receita] = []
+    let cars: [Cars] = [Cars(image: "bmw", name: "BMW Série 3 Sedã"),
+                    Cars(image: "ferrari", name: "Ferrari"),
+                    Cars(image: "camaro", name: "Chevrolet Camaro") ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initData()
         delegates()
         register()
         
@@ -33,9 +34,6 @@ class ViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: CustomTableViewCell.identifier)
     }
 
-    func initData() {
-        receitas.append(Receita(image: "pave",name: "Pavê de chocolate", preparationTime: 40, ingredients: "1/2 Pacote de bolacha. 1/2 copo de leite. 1 colher(sobremesa) de chocolate em pó. 1 Lata de leite condensado. 2 gemas. 1 lata de leite de vaca", preparationSteps: "Em uma tigela, misture o leite e o chocolate em pó até que esteja completamente dissolvido. Molhe as bolachas no leite e reserve. Creme Branco: Em uma panela, leve todos os ingredientes ao fogo médio e misture até obter uma consistência grossa e cremosa. Creme de Chocolate: Repita o processo feito no creme branco. Cobertura: Bata as claras em neve com o açúcar até obter um creme consistente, adicione o creme de leite e misture delicadamente. Montagem: Em um refratário grande, despeje o creme branco, metade das bolachas, creme de chocolate, bolachas e claras em neve. Repita o processo até preencher todo o refratário e leve à geladeira por 40 minutos."))
-    }
 }
 
 extension ViewController: UITableViewDelegate {
@@ -44,20 +42,23 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return receitas.count
+        return cars.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->  UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
         
-        let receita = receitas[indexPath.row]
+        let car = cars[indexPath.row]
         
-        cell.setup(title: receita.name, image: receita.image)
+        cell.setup(title: car.name, image: car.image)
         
         return cell
     }
     
-    
+    //UTILIZAR SEARCH CONTROL
+    //ORDENAÇÃO DA LIST PELA API, PROCURAR PARAMETER ORDER NA API
+    //rEQUISIÇÃO DA API TRAVA COM MAIS DE 1000 REQUISIÇÕES
+    //CRESCENTE OU DECRESCENTE COM BASE EM QUE?
     
     
 }

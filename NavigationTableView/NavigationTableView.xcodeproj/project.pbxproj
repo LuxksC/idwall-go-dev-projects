@@ -15,7 +15,7 @@
 		05B8B21C27E159FF00F3230F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B8B21A27E159FF00F3230F /* LaunchScreen.storyboard */; };
 		05B8B22627E15D1000F3230F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8B22427E15D1000F3230F /* CustomTableViewCell.swift */; };
 		05B8B22727E15D1000F3230F /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05B8B22527E15D1000F3230F /* CustomTableViewCell.xib */; };
-		05B8B22927E1617400F3230F /* Receita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8B22827E1617400F3230F /* Receita.swift */; };
+		05B8B22927E1617400F3230F /* Cars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8B22827E1617400F3230F /* Cars.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		05B8B21D27E159FF00F3230F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05B8B22427E15D1000F3230F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		05B8B22527E15D1000F3230F /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
-		05B8B22827E1617400F3230F /* Receita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receita.swift; sourceTree = "<group>"; };
+		05B8B22827E1617400F3230F /* Cars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 		05B8B22A27E1618A00F3230F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				05B8B22827E1617400F3230F /* Receita.swift */,
+				05B8B22827E1617400F3230F /* Cars.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 				05B8B21427E159FB00F3230F /* ViewController.swift in Sources */,
 				05B8B21027E159FB00F3230F /* AppDelegate.swift in Sources */,
 				05B8B22627E15D1000F3230F /* CustomTableViewCell.swift in Sources */,
-				05B8B22927E1617400F3230F /* Receita.swift in Sources */,
+				05B8B22927E1617400F3230F /* Cars.swift in Sources */,
 				05B8B21227E159FB00F3230F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
