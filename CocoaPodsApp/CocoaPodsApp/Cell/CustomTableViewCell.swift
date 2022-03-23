@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import Kingfisher
 
 class CustomTableViewCell: UITableViewCell {
     
@@ -24,6 +25,9 @@ class CustomTableViewCell: UITableViewCell {
         companyLabel.text = companyName
         imageCellView.layer.cornerRadius = 30
         imageCellView.loadImage(from: imageUrl)
+//        let url = URL(string: imageUrl)
+//        imageCellView.kf.setImage(with: url)
+        
     }
     
 }

@@ -10,12 +10,14 @@ import UIKit
 extension UIImageView {
   
     func loadImage(from url: String) {
+        //verifica se a url é valida
         guard let imageURL = URL(string: url) else { return }
 
         let cache =  URLCache.shared
         let request = URLRequest(url: imageURL)
       
         DispatchQueue.global(qos: .userInitiated).async {
+            //verifica se a imagem está em cache
             if let data = cache.cachedResponse(for: request)?.data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {
                     self.transition(toImage: image)
@@ -33,7 +35,8 @@ extension UIImageView {
             }
         }
     }
-  
+    
+    //animação
     func transition(toImage image: UIImage?) {
         UIView.transition(with: self, duration: 0.2,
                           options: [.transitionCrossDissolve],

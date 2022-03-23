@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+//import Alamofire
 
 enum UserError: Error {
     case urlInvalid
@@ -23,6 +24,15 @@ class DougService: ServicesProtocol {
     let session = URLSession.shared
     
     let url = "https://run.mocky.io/v3/f0c36709-84e2-4043-a0f0-3bec512f6c84"
+    /*
+     AF.request(url, method: .get).validate().responseDecodable(of: [User].self) { response in
+     
+        guard let users = response.value {return}
+     
+        completion(.success(users))
+     }
+     */
+    
     
     // Singleton pattern
     static var shared: DougService = {
@@ -35,6 +45,8 @@ class DougService: ServicesProtocol {
         
         // verify if is a valid url
         guard let url = URL(string: url) else { return completion(.failure(.urlInvalid)) }
+        
+        
         
         // data check
         let dataTask = session.dataTask(with: url) { data, _ , _ in
