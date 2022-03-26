@@ -56,13 +56,14 @@ class FormViewController: UIViewController {
         super.viewDidLoad()
         
         safeArea = view.layoutMarginsGuide
-        configureView()
+        configView()
+        addSubviews()
         
     }
 
     // MARK: - Methods Private
     
-    private func configureView() {
+    private func configView() {
         title = "Login"
         
         view.backgroundColor = .systemBlue
@@ -70,18 +71,8 @@ class FormViewController: UIViewController {
     
     private func addSubviews() {
         view.addSubviews(emaiLabel, emailInput, passwordLabel)
-        
-        content.addSubview(descriptionLabel)
     }
-    
-    private func configureIconImageView() {
-        NSLayoutConstraint.activate([
-            iconImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 10),
-            iconImageView.heightAnchor.constraint(equalToConstant: 80),
-            iconImageView.widthAnchor.constraint(equalToConstant: 80),
-            iconImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-    }
+
 
 }
 

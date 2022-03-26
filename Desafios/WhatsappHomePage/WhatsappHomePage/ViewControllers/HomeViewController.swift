@@ -16,6 +16,14 @@ class HomeViewController: UIViewController {
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
+    
+    lazy var BroadcastButton: UIButton = {
+        let button = UIButton(type: .close)
+        button.tintColor = UIColor.link
+        button.
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
     // MARK: - Life cicles
     
