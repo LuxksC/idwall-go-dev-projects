@@ -4,11 +4,9 @@
 //
 //  Created by Lucas de Castro Souza on 18/03/22.
 //
-
 import Foundation
 import UIKit // Necessário para referências como UIApplication
 import CoreData // necessário para acessar o banco na função getContext
-
 typealias onCompletionHandler = (String) -> Void
 
 protocol managedProtocol {
@@ -27,6 +25,8 @@ class ManagedObjectContext: managedProtocol, managedSaveProtocol, managedDeleteP
     
     private let entity = "Users"
     
+    public var listPerson: [Person] = []
+    
     // forma de passar o Context para a ViewController
     static var shared: ManagedObjectContext = {
         let instance = ManagedObjectContext()
@@ -40,7 +40,6 @@ class ManagedObjectContext: managedProtocol, managedSaveProtocol, managedDeleteP
     }
     
     func getPeople() -> [Person] {
-        var listPerson: [Person] = []
         
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entity)
         
@@ -65,6 +64,8 @@ class ManagedObjectContext: managedProtocol, managedSaveProtocol, managedDeleteP
         }
         
         return listPerson
+        //delete this return 
+        
     }
     
     func save(person: Person, onCompletionHandler: (String) -> Void) {

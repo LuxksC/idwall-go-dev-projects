@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ViewCode
 //
-//  Created by Sandra Monteiro de Castro on 22/03/22.
+//  Created by Douglas Nunes on 22/03/22.
 //
 
 import UIKit

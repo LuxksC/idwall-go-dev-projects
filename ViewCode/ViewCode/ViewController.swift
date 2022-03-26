@@ -2,83 +2,146 @@
 //  ViewController.swift
 //  ViewCode
 //
-//  Created by Sandra Monteiro de Castro on 22/03/22.
+//  Created by Douglas Nunes on 22/03/22.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-    /*
-    var button: UIButton = UIButton() // só é possível fazer manipulação desse button dentro de uma função ou propriedade
-     */
+
+    // MARK: - Properties Privates
     
-    var safeArea: UILayoutGuide!
+    private enum Defaults {
+        
+        static let titleInfo = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"
+        static let titleButton = "Call View"
+        static let descriptionInfo = "Center Label"
+        
+        static let titleView = "View Code"
+    }
     
-    lazy var iconImageView: UIImageView = { //manipulação das propriedades usando closure
+    private var safeArea: UILayoutGuide!
+    
+    
+    // MARK: - Properties Publics
+    
+    lazy var iconImageView: UIImageView = {
         let icon = UIImageView()
-        
-        icon.image = UIImage(systemName: "airplane") //nome do ícone na biblioteca
-        icon.translatesAutoresizingMaskIntoConstraints = false // define se a mascara de autolayout deve ser utilizado, caso seja true é necessário usar calculos matematicos para posicionamento
-        
+        icon.image = UIImage(systemName: "airplane")
+        icon.translatesAutoresizingMaskIntoConstraints = false
         return icon
     }()
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        
-        //ESTILIZAÇÃO DO LABEL
-        label.textColor = .systemBlue
+        label.textColor = .blue
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 13)
-        label.text = "Desscription for a long text that is not a Lorem that is bigger than onnnnneee line"
+        label.backgroundColor = .orange
+        label.text = Defaults.titleInfo
         label.translatesAutoresizingMaskIntoConstraints = false
-        
         return label
-        
     }()
     
+    lazy var callButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setTitle(Defaults.titleButton, for: .normal)
+        button.backgroundColor = .orange
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.addTarget(self, action: #selector(getView), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    lazy var content: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemIndigo
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.textColor = .grayViewCode
+        label.text = Defaults.descriptionInfo
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    @objc func getView() {
+        print("Cliquei aqui")
+    }
+    
+    // MARK: - Life cicles
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
-        //BUTTON STYLE
-        button.setTitle("Button View", for: UIControl.State.normal)
-        button.frame = CGRect(x: 0, y: 0, width: 130, height: 45)
-        button.backgroundColor = .systemRed
+        safeArea = view.layoutMarginsGuide
+        configureView()
+        addSubviews()
+        configureIconImageView()
+        configureTitleLabel()
+        configureCallButton()
+    }
+
+    
+    // MARK: - Methods Private
+    
+    private func addSubviews() {
+        view.addSubviews(iconImageView, callButton, titleLabel, content)
         
-        //ADDING BUTTON ON VIEW
-        view.addSubview(button)
-        */
-        
-        //DEFINIÇÃO DE UMA SAFE AREA PARA O APP
-        safeArea = view.layoutMarginsGuide //iremos usar essa referencia em vez de usar a view
-        
-        //ADDING IMAGE AND LABEL ON VIEW
-        view.addSubview(iconImageView)
-        view.addSubview(titleLabel)
-        
-        //SET .isActive = true for everything inside it
+        content.addSubview(descriptionLabel)
+    }
+    
+    private func configureIconImageView() {
         NSLayoutConstraint.activate([
-            //POSITIONING IMAGE
-            iconImageView.topAnchor.constraint(equalTo: safeArea.topAnchor /*referencia de posicionamento*/, constant: 10),
+            iconImageView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 10),
             iconImageView.heightAnchor.constraint(equalToConstant: 80),
             iconImageView.widthAnchor.constraint(equalToConstant: 80),
-            iconImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            iconImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+    
+    private func configureTitleLabel() {
+        titleLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 20).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Metrics.Margin.default).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.Margin.default).isActive = true
+    }
+    
+    private func configureCallButton() {
+        NSLayoutConstraint.activate([
         
+            callButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
+            callButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Metrics.Margin.default),
+            callButton.heightAnchor.constraint(equalToConstant: Metrics.Margin.input),
+            callButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.Margin.default)
+        ])
+    }
+    
+    private func configureContentView() {
+        NSLayoutConstraint.activate([
+            content.topAnchor.constraint(equalTo: callButton.bottomAnchor, constant: 20),
+            content.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Metrics.Margin.default),
+            content.heightAnchor.constraint(equalToConstant: 200),
+            content.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.Margin.default)
         ])
         
-        
-        
-        //POSITIONING IMAGE
-        titleLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 20).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-        
-        title = "View Controller"
+    }
+    
+    private func configureDescriptionLabel() {
+        NSLayoutConstraint.activate([
+            descriptionLabel.centerXAnchor.constraint(equalTo: content.centerXAnchor),
+            descriptionLabel.centerYAnchor.constraint(equalTo: content.centerYAnchor)
+        ])
+    }
+    
+    private func configureView() {
+        title = Defaults.titleView
         
         view.backgroundColor = .white
     }
-
 
 }
 
