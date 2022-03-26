@@ -3,4 +3,4 @@ Repositório criado para guardar os arquivos gerados no treinamento GoDev em Swi
 
 Na pasta desafios estão os projetos que o professor pediu que fossem elaborados.
 
-Na pasta feitos-na-aula, estão os projetos que o próprio professor fez em aula
+Na pasta feitos-na-aula, estão os projetos que fiz acompanhando os passos do professor.
