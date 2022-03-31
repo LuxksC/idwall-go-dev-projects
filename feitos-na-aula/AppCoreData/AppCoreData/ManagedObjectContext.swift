@@ -7,6 +7,7 @@
 import Foundation
 import UIKit // Necessário para referências como UIApplication
 import CoreData // necessário para acessar o banco na função getContext
+
 typealias onCompletionHandler = (String) -> Void
 
 protocol managedProtocol {

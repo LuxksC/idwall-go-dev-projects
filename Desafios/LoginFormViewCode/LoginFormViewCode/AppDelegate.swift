@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  LoginFormViewCode
-//
-//  Created by Sandra Monteiro de Castro on 23/03/22.
-//
-
 import UIKit
 
 @main

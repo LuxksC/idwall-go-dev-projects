@@ -19,7 +19,7 @@
 		055AA68F27EF573E0056C670 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055AA68E27EF573E0056C670 /* AddTaskViewController.swift */; };
 		055AA69127EF66CE0056C670 /* TaskStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055AA69027EF66CE0056C670 /* TaskStatus.swift */; };
 		055AA69527EF6CB90056C670 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055AA69427EF6CB90056C670 /* TaskTableViewCell.swift */; };
-		055AA69827EFA3EB0056C670 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055AA69727EFA3EB0056C670 /* UIView+extensions.swift */; };
+		055AA69827EFA3EB0056C670 /* UIStackView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055AA69727EFA3EB0056C670 /* UIStackView+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		055AA68E27EF573E0056C670 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		055AA69027EF66CE0056C670 /* TaskStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStatus.swift; sourceTree = "<group>"; };
 		055AA69427EF6CB90056C670 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
-		055AA69727EFA3EB0056C670 /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		055AA69727EFA3EB0056C670 /* UIStackView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 		055AA69627EFA3D30056C670 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				055AA69727EFA3EB0056C670 /* UIView+extensions.swift */,
+				055AA69727EFA3EB0056C670 /* UIStackView+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				055AA69827EFA3EB0056C670 /* UIView+extensions.swift in Sources */,
+				055AA69827EFA3EB0056C670 /* UIStackView+extensions.swift in Sources */,
 				055AA67427EF42AD0056C670 /* HomeViewController.swift in Sources */,
 				055AA68F27EF573E0056C670 /* AddTaskViewController.swift in Sources */,
 				055AA69527EF6CB90056C670 /* TaskTableViewCell.swift in Sources */,

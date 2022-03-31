@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0525C3F327F2424500E9FB70 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525C3F227F2424500E9FB70 /* CustomLabel.swift */; };
+		0525C3F527F255C800E9FB70 /* UIStackView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525C3F427F255C800E9FB70 /* UIStackView+extensions.swift */; };
+		0525C3F727F2593000E9FB70 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0525C3F627F2593000E9FB70 /* CustomTextField.swift */; };
 		059677E827EE6129001C82DB /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059677E727EE6129001C82DB /* UIView+extensions.swift */; };
 		05B9B5EB27EBF1FA004A8938 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9B5EA27EBF1FA004A8938 /* AppDelegate.swift */; };
 		05B9B5ED27EBF1FA004A8938 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9B5EC27EBF1FA004A8938 /* SceneDelegate.swift */; };
 		05B9B5EF27EBF1FA004A8938 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B9B5EE27EBF1FA004A8938 /* FormViewController.swift */; };
 		05B9B5F427EBF1FC004A8938 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05B9B5F327EBF1FC004A8938 /* Assets.xcassets */; };
 		05B9B5F727EBF1FC004A8938 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05B9B5F527EBF1FC004A8938 /* LaunchScreen.storyboard */; };
+		05D7A6D327F6336F0024CE0A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7A6D227F6336F0024CE0A /* User.swift */; };
+		05D7A6D527F63BBC0024CE0A /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7A6D427F63BBC0024CE0A /* String+extensions.swift */; };
+		05ED7DF727F39FC000CE429D /* CustomErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ED7DF627F39FC000CE429D /* CustomErrorLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0525C3F227F2424500E9FB70 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		0525C3F427F255C800E9FB70 /* UIStackView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+extensions.swift"; sourceTree = "<group>"; };
+		0525C3F627F2593000E9FB70 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		059677E727EE6129001C82DB /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
 		05B9B5E727EBF1FA004A8938 /* LoginFormViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginFormViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05B9B5EA27EBF1FA004A8938 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,9 @@
 		05B9B5F327EBF1FC004A8938 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05B9B5F627EBF1FC004A8938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05B9B5F827EBF1FC004A8938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05D7A6D227F6336F0024CE0A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = "../../../../feitos-na-aula/dependencyInject/dependencyInject/Commons/User.swift"; sourceTree = "<group>"; };
+		05D7A6D427F63BBC0024CE0A /* String+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
+		05ED7DF627F39FC000CE429D /* CustomErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrorLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,10 +49,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0525C3F127F2420400E9FB70 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0525C3F227F2424500E9FB70 /* CustomLabel.swift */,
+				0525C3F627F2593000E9FB70 /* CustomTextField.swift */,
+				05ED7DF627F39FC000CE429D /* CustomErrorLabel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		059677E627EE6104001C82DB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				059677E727EE6129001C82DB /* UIView+extensions.swift */,
+				0525C3F427F255C800E9FB70 /* UIStackView+extensions.swift */,
+				05D7A6D427F63BBC0024CE0A /* String+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -64,15 +88,25 @@
 		05B9B5E927EBF1FA004A8938 /* LoginFormViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				05D7A6D127F6334A0024CE0A /* Models */,
+				0525C3F127F2420400E9FB70 /* Components */,
+				059677E627EE6104001C82DB /* Extensions */,
 				05B9B5EA27EBF1FA004A8938 /* AppDelegate.swift */,
 				05B9B5EC27EBF1FA004A8938 /* SceneDelegate.swift */,
 				05B9B5EE27EBF1FA004A8938 /* FormViewController.swift */,
-				059677E627EE6104001C82DB /* Extensions */,
 				05B9B5F327EBF1FC004A8938 /* Assets.xcassets */,
 				05B9B5F527EBF1FC004A8938 /* LaunchScreen.storyboard */,
 				05B9B5F827EBF1FC004A8938 /* Info.plist */,
 			);
 			path = LoginFormViewCode;
+			sourceTree = "<group>";
+		};
+		05D7A6D127F6334A0024CE0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				05D7A6D227F6336F0024CE0A /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +179,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0525C3F727F2593000E9FB70 /* CustomTextField.swift in Sources */,
 				05B9B5EF27EBF1FA004A8938 /* FormViewController.swift in Sources */,
+				0525C3F327F2424500E9FB70 /* CustomLabel.swift in Sources */,
 				05B9B5EB27EBF1FA004A8938 /* AppDelegate.swift in Sources */,
+				05D7A6D527F63BBC0024CE0A /* String+extensions.swift in Sources */,
+				0525C3F527F255C800E9FB70 /* UIStackView+extensions.swift in Sources */,
+				05D7A6D327F6336F0024CE0A /* User.swift in Sources */,
 				059677E827EE6129001C82DB /* UIView+extensions.swift in Sources */,
+				05ED7DF727F39FC000CE429D /* CustomErrorLabel.swift in Sources */,
 				05B9B5ED27EBF1FA004A8938 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

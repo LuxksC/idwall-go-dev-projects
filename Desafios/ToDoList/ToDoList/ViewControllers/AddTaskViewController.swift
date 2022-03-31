@@ -88,7 +88,6 @@ class AddTaskViewController: UIViewController {
             let formatter = DateFormatter()
             formatter.dateFormat = "dd/MM/yyyy"
             let someDateTime = formatter.date(from: dueDateTextField.text!)
-    
             persistence.addTask(title: titleTextField.text!, desc: descTextField.text!, dueAt: someDateTime)
         }
         
